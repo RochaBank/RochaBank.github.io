@@ -1,7 +1,7 @@
 // MARK: =============================  Definir Firebase OnLine  ====================================
 
 
-
+// window.location.href = "Conectado.html";
 
 var firebaseConfig = {
     apiKey: "AIzaSyAqnA-19T5WQQn3M8sJ_-Up-ZrlSpsDO70",
@@ -24,6 +24,18 @@ var firebaseConfig = {
 // ===========================================================================================
 
 
+function ObterPessoal1() {
+  var username = document.getElementById("Nome_Real_CD").value
+  
+  var DadosPessoais = database.ref('Usuarios/' + username + "/Info/Pessoal")
+  DadosPessoais.on('value', function(snapshot) {
+    var data = snapshot.val()
+      localStorage.setItem("Nome_Real_OB1", data.Nome_Real);
+  });
+    
+          
+      };
+
 function ObterCadastro() {
   var username = localStorage.getItem("Nome1");
   
@@ -32,6 +44,7 @@ function ObterCadastro() {
     var data = snapshot.val()
       localStorage.setItem("Modo_OB", data.Modo);
       localStorage.setItem("Dia_Cadastro_OB", data.Dia_Cadastro);
+      localStorage.setItem("Contador_OB", data.Contador);
    
   });
       var DadosPessoais = database.ref('Usuarios/' + username + "/Info/Cadastro/Senha")
@@ -76,7 +89,6 @@ function ObterDados() {
                                           localStorage.setItem("Server_OB", data.Server);
                                           localStorage.setItem("Project_OB", data.Project);
                                           localStorage.setItem("Total_OB", data.Total);
-                                          localStorage.setItem("Total_OB", data.Total);
                                           
                                       });
  }
@@ -96,7 +108,6 @@ function ObterPessoal() {
                                             localStorage.setItem("Idade_OB", data.Idade);
                                             localStorage.setItem("Sexo_OB", data.Sexo);
                                             localStorage.setItem("Serie_OB", data.Serie);
-                                            localStorage.setItem("Telefone_OB", data.Telefone);
                                             localStorage.setItem("Campo_OB", data.Campo);
 
                                         });
@@ -104,16 +115,33 @@ function ObterPessoal() {
                                                          
    }
 
+ObterQuantidade()
+
+   
+function ObterQuantidade() {
+
+
+
+                                      var DadosPessoais = database.ref('Usuarios1/Quantidade')
+                                      DadosPessoais.on('value', function(snapshot) {
+                                        var data = snapshot.val()
+                                          localStorage.setItem("Quantidade", data.Alunos);
+                                        
+                                      });
+                                     
+                                                       
+ }
+
+ 
 // ===========================================================================================
 // ===========================================================================================
   
-
 
 if (localStorage.getItem("Caso2") == "SUS") {
   document.getElementById("Toast_Text").innerHTML = localStorage.getItem("Message")
   Toast()
 
-  window.location.href = "Conectar.html";
+  window.location.href = "index.html";
 }
 
 
@@ -175,9 +203,8 @@ function Register420 () {
       Nome_Real : localStorage.getItem("Nome_Real_CD"),
       Sexo : localStorage.getItem("Sexo"),
       Serie : localStorage.getItem("Serie_CD"),
-      Idade : localStorage.getItem("Idade_CD"),
+      Idade : localStorage.getItem("Idade_CD1"),
       Campo : localStorage.getItem("Matutino_Select"),
-      Telefone : localStorage.getItem("Telefone_CD"),
     
     }
     var Pessoal_1_1_2 = {
@@ -191,12 +218,13 @@ function Register420 () {
     }
 
         var Cadastro_1_2_1 = {
-          Nome_Usuario : localStorage.getItem("Nome_Usuario"),
+          Nome_Usuario : localStorage.getItem("Nome_Usuario_CD"),
       Nome_Real : localStorage.getItem("Nome_Real_CD"),
 
           Dia_Cadastro : day,
           Senha : localStorage.getItem("Senha_CD"),
-          Modo : localStorage.getItem("Modo")
+          Modo : localStorage.getItem("Modo"),
+          Contador : localStorage.getItem("Contador_CD1")
         }
         var Cadastro_1_2_2 = {
           Senha : localStorage.getItem("Senha_CD")
@@ -230,6 +258,22 @@ function Register420 () {
                       var Ganhos = {
                         1 : "Vazio Por Enquanto"
                       }
+                      const salario = localStorage.getItem("Quantidade")
+
+                      const salarioFormatado = parseFloat(salario);
+                     
+                     
+                          var Usuarios = {
+                            Alunos : salarioFormatado + 1
+                           
+                          }
+                          var Usuarios1 = {
+                            Nome_Real : localStorage.getItem("Nome_Real_CD"),
+                            Nome_Usuario : localStorage.getItem("Nome_Usuario_CD"),
+                            Amigos : "0"
+                          }
+                    
+                         
     // // =============================== Criar Usuario Data ==============================
   
                                    
@@ -249,12 +293,25 @@ function Register420 () {
     database_ref.child('Usuarios/' +  full_name + "/Dados/HistoricoLeal").set(Cecebi_Leal)
     database_ref.child('Usuarios/' +  full_name + "/Dados/HistoricoGanhos").set(Ganhos)
 
+ObterQuantidade()
+
+setTimeout(function() {
+  const salario = localStorage.getItem("Quantidade")
+
+  const salarioFormatado = parseFloat(salario);
+  const salario1 = salarioFormatado + 1;
+  database_ref.child('Usuarios1/Quantidade').set(Usuarios)
+  database_ref.child('Usuarios1/Uid/' + salario1).set(Usuarios1)
 
 
-if (localStorage.getItem("Metodo999") == "Register555") {
-  
-    login12()
-}
+
+  setTimeout(function() {
+  document.getElementById("Toast_Text").innerHTML = "Sua Conta Foi Criada"
+  Toast()
+  document.getElementById("Create").stye = "display: none;"
+  window.location.href = "index.html";
+}, 1000);
+}, 1000);
   }
   
 
@@ -400,72 +457,7 @@ if (localStorage.getItem("Vez22") == "true") {
 
 
 
-function Register1992() {
-    
-  localStorage.setItem("Metodo", "Criar");
 
-  if (document.getElementById("Modo").value == "1") {
-  localStorage.setItem("Modo", "Aluno");
-}
-if (document.getElementById("Modo").value == "3") {
-  localStorage.setItem("Modo", "Professor");
-}
-if (document.getElementById("Modo").value == "4") {
-  localStorage.setItem("Modo", "Cordenador");
-}
-if (document.getElementById("Modo").value == "5") {
-  localStorage.setItem("Modo", "Administrador");
-}
-if (document.getElementById("Modo").value == "6") {
-  localStorage.setItem("Modo", "Desenvolvedor");
-}
-
-
-localStorage.setItem("Opt_1", "Personalizado");
-function Opt_1_1() {
-localStorage.setItem("Opt_1", "Personalizado");
-}
-function Opt_1_2() {
-localStorage.setItem("Opt_1", "Masculino");
-}
-function Opt_1_3() {
-localStorage.setItem("Opt_1", "Feminino");
-}
-
-                                            localStorage.setItem("Telefone_OB", data.Telefone);
-if (localStorage.getItem("Matutino_Select") == "Medio") {
-localStorage.setItem("Serie_CD", document.getElementById("Serie_CD").value);
-} else {
-localStorage.setItem("Serie_CD", document.getElementById("Seri_CD").value);
-
-}
-localStorage.setItem("Leal_INC", document.getElementById("Leal_INC").value); 
-localStorage.setItem("Description12", document.getElementById("Description12").value);
-localStorage.setItem("Contador", document.getElementById("Contador1").value);
-localStorage.setItem("Nome_Real_CD", document.getElementById("Nome_Real_CD").value);
-
-localStorage.setItem("Idade_CD1234", document.getElementById("Idade_CD12341").value);
-localStorage.setItem("Senha_CD", document.getElementById("Senha_CD1").value); 
-localStorage.setItem("Idade_CD1234", document.getElementById("Idade_CD12341").value); 
-localStorage.setItem("Sexo", document.getElementById("Sexo").value); 
-
-
-if (localStorage.getItem("Contador").length > 3 || !localStorage.getItem("Senha_CD").length == 0 && localStorage.getItem("Senha_CD").length > 3 && !localStorage.getItem("Idade_CD1234").value == "") {
-var data45 = new Date()
-const horas = data45.getHours();
-
-
-localStorage.setItem("Criado", horas); 
-
-Register420()
-
-} else {
-if (localStorage.getItem("Metodo") == "Criar") {
-document.getElementById("Toast_Text").innerHTML = "Algumas das Informações Não Foram Aceitas!, Cadastro Mal Sucedido"
-Toast()
-}
-}
-}
 
 function limit(element)
 {
@@ -546,7 +538,7 @@ if (localStorage.getItem("Tentar_Login") == "false") {
       localStorage.setItem("Last_Login_Horas", horas);
       localStorage.setItem("Last_Login_Minutos", minutos);
 
-if (localStorage.getItem("Modo_OB") == "Adiministrador" || localStorage.getItem("Modo_OB") == "Professor") {
+if (localStorage.getItem("Modo_OB") == "Adiministrador" || localStorage.getItem("Modo_OB") == "Professor" || localStorage.getItem("Modo_OB") == "Desenvolvedor") {
   window.location.href = "Inicio.html";
 
 } else {
