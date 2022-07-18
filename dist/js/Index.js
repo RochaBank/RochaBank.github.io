@@ -25,16 +25,31 @@ var firebaseConfig = {
 
 
 function ObterPessoal1() {
-  var username = document.getElementById("Nome_Real_CD").value
+  var username = localStorage.getItem("Nome1")
   
   var DadosPessoais = database.ref('Usuarios/' + username + "/Info/Pessoal")
   DadosPessoais.on('value', function(snapshot) {
     var data = snapshot.val()
-      localStorage.setItem("Nome_Real_OB1", data.Nome_Real);
+      localStorage.setItem("Nome_Real_OB", data.Nome_Real);
   });
     
           
       };
+
+
+      function Armazenar() {
+        var username = localStorage.getItem("Nome1")
+        
+        var DadosPessoais = database.ref('Usuarios/' + username + "/Dados/Armazenar/Info")
+        DadosPessoais.on('value', function(snapshot) {
+          var data = snapshot.val()
+            localStorage.setItem("Total_OB", data.Total);
+         
+        });
+          
+                
+            };
+
 
 function ObterCadastro() {
   var username = localStorage.getItem("Nome1");
@@ -233,15 +248,14 @@ function Register420 () {
           Ultimo_Login : day
         }
             var Notification = {
-              1 : "Conta Registrada Com Sucesso!!",
-              2 : "Configure Sua Conta!",
-              3 : "Parabens Voçê Ganha 1 leal!",
-              4 : "Versão Beta deectado!"
+              1 : "Conta Registrada Com Sucesso!!"
+             
             }
                 var Armazenar = {
+                  Toatal : "0%",
                   Mensagens : "0%",
                   Fotos : "0%",
-                  Posters : "0%",
+                  Posters : "0%"
                 }
                   var Cecebi_Leal = {
 
@@ -257,6 +271,10 @@ function Register420 () {
                   }
                       var Ganhos = {
                         1 : "Vazio Por Enquanto"
+                      }
+                      var Ganhos1 = {
+                        Quant : "1",
+                        1 : localStorage.getItem("Nome_Usuario_CD")
                       }
                       const salario = localStorage.getItem("Quantidade")
 
@@ -292,6 +310,7 @@ function Register420 () {
     database_ref.child('Usuarios/' +  full_name + "/Dados/Armazenar/Info").set(Armazenar)
     database_ref.child('Usuarios/' +  full_name + "/Dados/HistoricoLeal").set(Cecebi_Leal)
     database_ref.child('Usuarios/' +  full_name + "/Dados/HistoricoGanhos").set(Ganhos)
+    database_ref.child('Usuarios/' +  full_name + "/Dados/ListaDeAmigos").set(Ganhos)
 
 ObterQuantidade()
 
@@ -322,7 +341,7 @@ setTimeout(function() {
 // ==============================  Segurança  =================================================
 
 
- // document.addEventListener('contextmenu', event => event.preventDefault());
+ document.addEventListener('contextmenu', event => event.preventDefault());
  document.getElementById("login-btn").style = 'display:auto';
 
 
