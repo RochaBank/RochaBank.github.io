@@ -814,7 +814,7 @@ if (localStorage.getItem("Modo_OB") == "Adiministrador" || localStorage.getItem(
   window.location.href = "Inicio.html";
 
 } else {
-  window.location.href = "Conectado.html";
+  window.location.href = "Inicio.html";
 
 }
       } else {
