@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   </head>
  
-  <body  onload="load12()">
+  <body>
     <div id="Page_1">
       
     <div id="snackbar"> <span id="Toast_Text"></span> </div>
@@ -1182,7 +1182,7 @@
                               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" /></svg>
                             </span>
                           </button>
-                          0
+                          <span id="Likes_Id">0</span>
                         </div>
                         <div class="col-auto">
                           <a href="#" class="link-muted"><!-- Download SVG icon from http://tabler-icons.io/i/share -->
@@ -1838,7 +1838,7 @@ if (localStorage.getItem("Provas_OB") > 48) {
  document.getElementById("Provas_TL").innerHTML = localStorage.getItem("Provas_OB");
 
 
- var iii0 = localStorage.getItem("Ganhos").valueOf()
+ var iii0 = localStorage.getItem("Ganhos_OB").valueOf()
  var ii0 = iii0 / 10 + 1
 
  
@@ -1978,23 +1978,7 @@ document.getElementById("Server_PG").style = "width:" + ii6 + "%" + ";";
        </script>
 
        <script>
-        function bem_vindo_confirm1() {
-          localStorage.setItem("Metodo1", 'Vez');
-
-          
-      
-          document.getElementById("Boas555").style = 'display:none';
-          
-      
-        }
-          
-      
-        if (localStorage.getItem("Vez22") == "true") {
-          document.getElementById("Boas555").style = 'display:none';
-        } else {
-          document.getElementById("Boas555").style = 'display:auto';
-      
-        }
+       
       
       
           localStorage.setItem("Metodo", "Logi1n");
@@ -2083,14 +2067,6 @@ document.getElementById("Server_PG").style = "width:" + ii6 + "%" + ";";
 
 
 
- if (localStorage.getItem("Compras") == "0") {
-document.getElementById("Cart").innerHTML = "Vazio"
- } else {
-document.getElementById("Cart_Desc").innerHTML = "Voçê Tem: " + localStorage.getItem("Compras") + " Compras"
-document.getElementById("Cart").innerHTML = localStorage.getItem("Compras") + " Compras";
-
-
- }
 
  
  if (localStorage.getItem("Modo") == 'Desenvolvedor' || localStorage.getItem("Modo") == 'Administrador' || localStorage.getItem("Modo") == 'Cordenador' || localStorage.getItem("Modo") == 'Professor') {
@@ -2098,7 +2074,6 @@ document.getElementById("Mode_ADM").style = ""
 
 
       } else {
-   document.getElementById("Modo_ADM").onclick = ""
 
  
 }
@@ -2585,5 +2560,3 @@ if (localStorage.getItem('Likes_On') == 'On') {
  </script>
   </body>
 </html>
-
-		  
