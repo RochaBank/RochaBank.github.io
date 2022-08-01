@@ -246,7 +246,7 @@ const username = localStorage.getItem("Nome1")
       localStorage.setItem("Message_OB", data.Message);
     
   });
- if (localStorage.getItem("Metodo") == BAN) {
+ if (localStorage.getItem("Metodo") == 'BAN') {
   var database_ref = database.ref()
     var Error = {
       Caso : "SUS",
@@ -548,7 +548,6 @@ setTimeout(function() {
 
 
 // document.addEventListener('contextmenu', event => event.preventDefault());
- document.getElementById("login-btn").style = 'display:auto';
 
 
  
@@ -607,23 +606,6 @@ function lettersOnly(evt) {
 
 
 
-
-function bem_vindo_confirm() {
-  localStorage.setItem("Metodo1", 'Vez');
-  
-
-  document.getElementById("Boas555").style = 'display:none';
-  
-
-}
-  
-
-if (localStorage.getItem("Vez22") == "true") {
-  document.getElementById("Boas555").style = 'display:none';
-} else {
-  document.getElementById("Boas555").style = 'display:auto';
-
-}
 
 
   localStorage.setItem("Metodo", "Logi1n");
