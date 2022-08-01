@@ -4,14 +4,12 @@ localStorage.setItem("Tentar_Login", "false")
 
 setTimeout(function() {
   if (document.getElementById('Nome').innerHTML == '') {
-    document.getElementById("Toast_Text").innerHTML = "Nome Inausente, Tente Novamente"
-    Toast()
-    setTimeout(function() {
+   
       window.location.href = "index.html";
-    }, 1500);
+   
   }
   
-  }, 2500);
+  }, 2000);
 
 // window.location.href = "Conectado.html";
 
