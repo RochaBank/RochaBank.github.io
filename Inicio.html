@@ -163,7 +163,7 @@
             </div>
             <div class="nav-item dropdown">
               <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown" aria-label="Open user menu">
-                <span class="avatar avatar-sm" style="background-image: url(./static/avatars/user.png)"  style="background: rgb(2, 132, 255);"></span>
+                <span class="avatar avatar-sm"   style="background: rgb(2, 132, 255);" id="Capa"></span>
                 <div class="d-none d-xl-block ps-2">
                   <div id="Nome">Usuario 1</div>
                   <div class="mt-1 small text-muted" id="Serie">6° Serie</div>
@@ -2269,9 +2269,13 @@ if (localStorage.getItem("Load1") == "true") {
   document.getElementById("Splash").style = 'display:none';
 
 }
-}, 10000);
+}, 8000);
 
 
+</script>
+<script>
+    const Name1 = localStorage.getItem("Nome1").substr(0, 2);
+    document.getElementById('Capa').innerHTML = Name1
 </script>
 <style>
   @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
@@ -2581,3 +2585,5 @@ if (localStorage.getItem('Likes_On') == 'On') {
  </script>
   </body>
 </html>
+
+		  
