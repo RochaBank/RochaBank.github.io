@@ -237,7 +237,7 @@ if (localStorage.getItem("Caso2") == "SUS") {
 
 function ObterBanido() {
 
-
+const username = localStorage.getItem("Nome1")
 
   var DadosPessoais = database.ref('Usuarios/' + username + '/Dados/Caso')
   DadosPessoais.on('value', function(snapshot) {
