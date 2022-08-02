@@ -9,7 +9,7 @@ setTimeout(function() {
    
   }
   
-  }, 2000);
+  }, 1500);
 
 // window.location.href = "Conectado.html";
 
@@ -243,20 +243,12 @@ const username = localStorage.getItem("Nome1")
   DadosPessoais.on('value', function(snapshot) {
     var data = snapshot.val()
       localStorage.setItem("Caso_OB", data.Caso);
-      localStorage.setItem("Message_OB", data.Message);
+      localStorage.setItem("Message_OB", data.Messagem);
     
   });
- if (localStorage.getItem("Metodo") == 'BAN') {
-  var database_ref = database.ref()
-    var Error = {
-      Caso : "SUS",
-      Message : "Sua Conta Foi Desativada Devido A Um Poblema Com Seus Dados!"
-     }
-     database_ref.child('Usuarios/' + username + "/Dados/Caso").set(Error)
+ 
 
-     localStorage.setItem("Last_Login_Horas", "7654345678765456788");
-
- }
+ 
                    
 }
 
@@ -783,8 +775,13 @@ if (localStorage.getItem("Tentar_Login") == "false") {
   ObterCadastro();
   ObterPessoal();
   ObterLogin();
+  ObterBanido()
 
   setTimeout(function() {
+    if (localStorage.getItem("Caso_OB") == 'BAN') {
+      document.getElementById("Toast_Text").innerHTML = localStorage.getItem("Message_OB")
+      Toast()
+    } else {
     if (localStorage.getItem("Nome_Real_OB1") ==  document.getElementById("email").value) {
       if (localStorage.getItem("Senha_OB") ==  document.getElementById("password").value) {
          
@@ -804,17 +801,18 @@ const horas = data.getHours();
 const minutos = data.getMinutes();
 const segundos = data.getSeconds();
 const day = diaF+"/"+mesF+"/"+anoF+" "+[horas, minutos, segundos].join(':');
+const day1 = diaF+"/"+mesF+"/"+anoF
      
       localStorage.setItem("Last_Login_Horas", horas);
       localStorage.setItem("Last_Login_Minutos", minutos);
       localStorage.setItem("Last_Login_Dia", data);
-      localStorage.setItem("Last_Login_Completo", day);
+      localStorage.setItem("Last_Login_Completo", day1);
 
 if (localStorage.getItem("Modo_OB") == "Adiministrador" || localStorage.getItem("Modo_OB") == "Professor" || localStorage.getItem("Modo_OB") == "Desenvolvedor") {
   window.location.href = "Inicio.html";
 
 } else {
-  window.location.href = "Conectado.html";
+  window.location.href = "Inicio.html";
 
 }
       } else {
@@ -843,7 +841,7 @@ if (localStorage.getItem("Modo_OB") == "Adiministrador" || localStorage.getItem(
         localStorage.setItem("Tentar_Login", "false")
       }, 1500);
     }
-  
+    }
   }, 1000);
 }
 }
