@@ -4,11 +4,11 @@ localStorage.setItem("Tentar_Login", "false")
 
 setTimeout(function() {
   if (document.getElementById('Nome').innerHTML == '') {
-   
+
       window.location.href = "index.html";
-   
+
   }
-  
+
   }, 1500);
 
 // window.location.href = "Conectado.html";
@@ -22,10 +22,11 @@ var firebaseConfig = {
       messagingSenderId: "105823096937",
       appId: "1:105823096937:web:ae61163d65ab5ace2052f8"
   };
+
   // =============================== Iniciar Firebase ========================================
-  
+
   firebase.initializeApp(firebaseConfig);
-  
+
   // =============================== Iniciar Variavens Da Firebase ===========================
   const auth = firebase.auth()
   const database = firebase.database()
@@ -36,34 +37,34 @@ var firebaseConfig = {
 
 function ObterPessoal1() {
   var username = localStorage.getItem("Nome_Real_CD")
-  
+
   var DadosPessoais = database.ref('Usuarios/' + username + "/Info/Pessoal")
   DadosPessoais.on('value', function(snapshot) {
     var data = snapshot.val()
       localStorage.setItem("Nome_Real_OB1", data.Nome_Real);
   });
-    
-          
+
+
       };
 
 
       function ObterArmazenar() {
         var username = localStorage.getItem("Nome1")
-        
+
         var DadosPessoais = database.ref('Usuarios/' + username + "/Dados/Armazenar/Info")
         DadosPessoais.on('value', function(snapshot) {
           var data = snapshot.val()
             localStorage.setItem("Total_OB", data.Total);
-         
+
         });
-          
-                
+
+
             };
 
 
 function ObterCadastro() {
   var username = localStorage.getItem("Nome1");
-  
+
   var DadosPessoais = database.ref('Usuarios/' + username + "/Info/Cadastro")
   DadosPessoais.on('value', function(snapshot) {
     var data = snapshot.val()
@@ -71,35 +72,35 @@ function ObterCadastro() {
       localStorage.setItem("Dia_Cadastro_OB", data.Dia_Cadastro);
       localStorage.setItem("Contador_OB", data.Contador);
       localStorage.setItem("Uid2_OB", data.Endere);
-   
+
   });
       var DadosPessoais = database.ref('Usuarios/' + username + "/Info/Cadastro/Senha")
       DadosPessoais.on('value', function(snapshot) {
         var data = snapshot.val()
           localStorage.setItem("Senha_OB", data.Senha);
-          
+
       });
       var DadosPessoais = database.ref('Usuarios/' + username + "/Info/Cadastro/UT_Login")
       DadosPessoais.on('value', function(snapshot) {
         var data = snapshot.val()
           localStorage.setItem("Ultimo_Login_OB", data.Ultimo_Login);
-          
+
       });
 
-     
+
       var DadosPessoais = database.ref('Usuarios/' + username + "/Info/Cadastro/Nome_Usuario")
       DadosPessoais.on('value', function(snapshot) {
         var data = snapshot.val()
       localStorage.setItem("Nome_Usuario_OB", data.Nome_Usuario);
-       
-          
+
+
       });
       var DadosPessoais = database.ref('Usuarios/' + username + "/Info/Cadastro")
       DadosPessoais.on('value', function(snapshot) {
         var data = snapshot.val()
       localStorage.setItem("Uid_Soli_OB", data.Endere);
-       
-          
+
+
       });
 
 }
@@ -114,54 +115,54 @@ function ObterDados() {
                                       var DadosPessoais = database.ref('Usuarios/' + username + "/Dados/HistoricoLeal/Total")
                                       DadosPessoais.on('value', function(snapshot) {
                                         var data = snapshot.val()
-                                         
+
                                           localStorage.setItem("Total1_OB", data.Total);
-                                          
+
                                       });
                                       var DadosPessoais1 = database.ref('Usuarios/' + username + "/Dados/HistoricoLeal/Provas")
                                       DadosPessoais1.on('value', function(snapshot) {
                                         var data = snapshot.val()
                                           localStorage.setItem("Provas_OB", data.Provas);
-                                         
+
                                       });
                                       var DadosPessoais2 = database.ref('Usuarios/' + username + "/Dados/HistoricoLeal/Ganhos")
                                       DadosPessoais2.on('value', function(snapshot) {
                                         var data = snapshot.val()
                                           localStorage.setItem("Ganhos_OB", data.Ganhos);
-                                         
+
                                       });
                                       var DadosPessoais12 = database.ref('Usuarios/' + username + "/Dados/HistoricoLeal/Perdas")
                                       DadosPessoais12.on('value', function(snapshot) {
                                         var data = snapshot.val()
                                           localStorage.setItem("Perdas_OB", data.Perdas);
-                                         
+
                                       });
                                       var DadosPessoais3 = database.ref('Usuarios/' + username + "/Dados/HistoricoLeal/Social")
                                       DadosPessoais3.on('value', function(snapshot) {
                                         var data = snapshot.val()
                                           localStorage.setItem("Social_OB", data.Social);
-                                         
+
                                       });
                                       var DadosPessoais4 = database.ref('Usuarios/' + username + "/Dados/HistoricoLeal/Server")
                                       DadosPessoais4.on('value', function(snapshot) {
                                         var data = snapshot.val()
                                           localStorage.setItem("Server_OB", data.Server);
-                                         
+
                                       });
                                       var DadosPessoais5 = database.ref('Usuarios/' + username + "/Dados/HistoricoLeal/Project")
                                       DadosPessoais5.on('value', function(snapshot) {
                                         var data = snapshot.val()
                                           localStorage.setItem("Project_OB", data.Project);
-                                         
+
                                       });
                                        var DadosPessoais6 = database.ref('Usuarios/' + username + "/Dados/HistoricoLeal/Diarial")
                                       DadosPessoais6.on('value', function(snapshot) {
                                         var data = snapshot.val()
                                           localStorage.setItem("Diarial_OB", data.Diarial);
-                                         
+
                                       });
-                                     
-                                      
+
+
  }
 
 
@@ -176,19 +177,19 @@ function ObterDados() {
 function ObterLogin() {
 
   var username = localStorage.getItem("Nome2");
-  
+
 
   var DadosPessoais = database.ref('Usuarios/' + username + "/Info/Pessoal")
   DadosPessoais.on('value', function(snapshot) {
     var data = snapshot.val()
       localStorage.setItem("Nome_Real_OB1", data.Nome_Real);
-      
+
   });
 }
 function ObterPessoal() {
 
     var username = localStorage.getItem("Nome2");
-  
+
                                         var DadosPessoais = database.ref('Usuarios/' + username + "/Info/Pessoal")
                                         DadosPessoais.on('value', function(snapshot) {
                                           var data = snapshot.val()
@@ -199,13 +200,13 @@ function ObterPessoal() {
                                             localStorage.setItem("Campo_OB", data.Campo);
 
                                         });
-                                       
-                                                         
+
+
    }
 
 ObterQuantidade()
 
-   
+
 function ObterQuantidade() {
 
 
@@ -214,16 +215,16 @@ function ObterQuantidade() {
                                       DadosPessoais.on('value', function(snapshot) {
                                         var data = snapshot.val()
                                           localStorage.setItem("Quantidade", data.Alunos);
-                                        
+
                                       });
-                                     
-                                                       
+
+
  }
 
- 
+
 // ===========================================================================================
 // ===========================================================================================
-  
+
 
 if (localStorage.getItem("Caso2") == "SUS") {
   document.getElementById("Toast_Text").innerHTML = localStorage.getItem("Message")
@@ -244,25 +245,25 @@ const username = localStorage.getItem("Nome1")
     var data = snapshot.val()
       localStorage.setItem("Caso_OB", data.Caso);
       localStorage.setItem("Message_OB", data.Messagem);
-    
-  });
- 
 
- 
-                   
+  });
+
+
+
+
 }
 
 
 
 // ===========================================================================================
 // ===========================================================================================
-  
-    
+
+
    if (localStorage.getItem("Metodo") == "Error") {
-    
-  
+
+
     }
-  
+
 
 
   // ===========================================================================================
@@ -276,12 +277,12 @@ function Register420 () {
 
 
   // =============================== Variavens Nessacarias =================================
-  
+
   full_name = localStorage.getItem("Nome_Real_CD");
- 
-  
+
+
   // ===============================  Defini Horas ====================
-  
+
     var data = new Date(),
     dia  = data.getDate().toString(),
     diaF = (dia.length == 1) ? '0'+dia : dia,
@@ -292,13 +293,13 @@ function Register420 () {
   const minutos = data.getMinutes();
   const segundos = data.getSeconds();
   const day = diaF+"/"+mesF+"/"+anoF+" "+[horas, minutos, segundos].join(':');
-  
-    // =============================== Declarar A Firebase =============================
-  
 
-  
+    // =============================== Declarar A Firebase =============================
+
+
+
     // =============================== Definir O Que E Firebase ====================================
-  
+
     var database_ref = database.ref()
 
     // ===================================Definições =================================================
@@ -308,7 +309,7 @@ function Register420 () {
       Serie : localStorage.getItem("Serie_CD"),
       Idade : localStorage.getItem("Idade_CD1"),
       Campo : localStorage.getItem("Matutino_Select"),
-    
+
     }
     var Pessoal_1_1_2 = {
       Descricao : localStorage.getItem("Description12")
@@ -320,7 +321,7 @@ function Register420 () {
       Nome_Usuario : localStorage.getItem("Nome_Usuario_CD")
     }
 
-      
+
         var Cadastro_1_2_2 = {
           Senha : localStorage.getItem("Senha_CD")
         }
@@ -330,27 +331,27 @@ function Register420 () {
             var Notification1 = {
               title : "Registro",
               a1 : "Conta Registrada Com Sucesso!!"
-             
+
             }
             var Notification2 = {
               title : "Alerta",
 
               a2 : "A Varsão 1.0 Pode Ter bugs!!"
-             
+
             }
             var Notification3 = {
               title : "Parabens",
 
               a3 : "Voçê Ganhou 1 Leal"
-             
+
             }
             var Notification4 = {
               title : "Valeu Pela Força",
 
               a4 : "Obrigado"
-             
+
             }
-            
+
                 var Armazenar = {
                   Toatal : "0%",
                   Mensagens : "0%",
@@ -359,65 +360,65 @@ function Register420 () {
                 }
                   var Cecebi_Leal = {
 
-                  
-                    
+
+
                     Diarial : "0"
-                 
+
 
                   }
                   var Cecebi1_Leal = {
 
-                  
-                  
+
+
                     Project : "0"
-                
+
 
                   }
                   var Cecebi2_Leal = {
 
-                  
-                
+
+
                     Provas : "0"
-                 
+
                   }
                   var Cecebi3_Leal = {
 
-                  
-                 
+
+
                     Server : "1"
-                 
+
                   }
                   var Cecebi4_Leal = {
 
-                
+
                     Social : "0"
-                    
+
 
                   }
                   var Cecebi5_Leal = {
 
-           
+
                     Ganhos : "0"
 
                   }
                   if (document.getElementById('Leal_INC').value == '') {
                     var Cecebi6_Leal = {
 
-           
+
                       Total : '1.0'
-  
+
                     }
                   } else {
                   var Cecebi6_Leal = {
 
-           
+
                     Total : document.getElementById('Leal_INC').value
 
                   }
                 }
                   var Cecebi8_Leal = {
 
-           
+
                     Perdas : "0"
 
                   }
@@ -433,11 +434,11 @@ function Register420 () {
                       const salario = localStorage.getItem("Quantidade")
 
                       const salarioFormatado = parseFloat(salario);
-                     
-                     
+
+
                           var Usuarios = {
                             Alunos : salarioFormatado + 1
-                           
+
                           }
                           var Usuarios1 = {
                             Nome_Real : localStorage.getItem("Nome_Real_CD"),
@@ -450,7 +451,7 @@ function Register420 () {
                                 var Pagamentos = {
                                   Credit : Math.random(1, 100),
                                   Historico : "0",
-                                  
+
                                 }
                                 var Pagamentos1 = {
                                0 : "Vazio"
@@ -471,12 +472,12 @@ function Register420 () {
                                   var Trans = {
                                     Total : 0
                                   }
-                         
+
     // // =============================== Criar Usuario Data ==============================
-  
-                                   
+
+
     database_ref.child('Usuarios/' +  full_name + "/Info/Pessoal").set(Pessoal_1_1_1)
-  
+
     database_ref.child('Usuarios/' +  full_name + "/Info/Pessoal/Descricao").set(Pessoal_1_1_2)
     database_ref.child('Usuarios/' +  full_name + "/Info/Pessoal/Foto").set(Pessoal_1_1_3)
     database_ref.child('Usuarios/' +  full_name + "/Info/Pessoal/NomeUsuario").set(Pessoal_1_1_4)
@@ -530,7 +531,7 @@ setTimeout(function() {
 }, 1300);
 }, 1300);
   }
-  
+
 
  // ===========================================================================================
 // ============================================================================================
@@ -542,7 +543,7 @@ setTimeout(function() {
 // document.addEventListener('contextmenu', event => event.preventDefault());
 
 
- 
+
  // ===========================================================================================
 // ============================================================================================
 
@@ -573,7 +574,7 @@ function lettersOnly(evt) {
       ((evt.which) ? evt.which : 0));
   if (charCode > 33 && (charCode < 65 || charCode > 90) &&
       (charCode < 97 || charCode > 122)) {
- 
+
       return false;
   }
   return true;
@@ -612,12 +613,13 @@ function lettersOnly(evt) {
     localStorage.setItem("Nome", "");
     localStorage.setItem("Nome1", "");
     localStorage.setItem("Nome2", "");
+    localStorage.setItem("Nome3", "");
     localStorage.setItem("Serie", "");
     localStorage.setItem("Contador", "");
     localStorage.setItem("Senha", "");
     localStorage.setItem("Last_Login", "12345678");
 
-   
+
     window.location.href = "index.html";
   }
 
@@ -725,7 +727,7 @@ if(element.value.length > max_chars) {
 
 
 function login12() {
-  
+
 data1 = new Date()
 const horas5446545673 = data1.getHours();
 
@@ -752,7 +754,7 @@ const horas5446545673 = data1.getHours();
     } else {
 
   if (localStorage.getItem('3647465647337647376') == '11111') {
-   
+
 
   localStorage.setItem('36474656473376473761', '1')
 
@@ -761,7 +763,7 @@ const horas5446545673 = data1.getHours();
     localStorage.setItem('3647465647337647376', 1)
 
   }
-  
+
 
 if (localStorage.getItem("Tentar_Login") == "false") {
   document.getElementById("login-btn").style = 'opacity: 0.6;';
@@ -770,12 +772,14 @@ if (localStorage.getItem("Tentar_Login") == "false") {
   localStorage.setItem("Tentou", 'true');
   localStorage.setItem("Nome2", document.getElementById("email").value);
   localStorage.setItem("Nome1", document.getElementById("email").value);
+  localStorage.setItem("Nome3", document.getElementById("email").value);
+
   localStorage.setItem("Senha1", document.getElementById("password").value);
 
   ObterCadastro();
   ObterPessoal();
   ObterLogin();
-  ObterBanido()
+  ObterBanido();
 
   setTimeout(function() {
     if (localStorage.getItem("Caso_OB") == 'BAN') {
@@ -784,11 +788,11 @@ if (localStorage.getItem("Tentar_Login") == "false") {
     } else {
     if (localStorage.getItem("Nome_Real_OB1") ==  document.getElementById("email").value) {
       if (localStorage.getItem("Senha_OB") ==  document.getElementById("password").value) {
-         
-      
+
+
         localStorage.setItem('3647465647337647376', null)
 
-      
+
 
 localStorage.setItem('Nome_Real_OB1', "Vazio")
 data = new Date(),
@@ -802,7 +806,7 @@ const minutos = data.getMinutes();
 const segundos = data.getSeconds();
 const day = diaF+"/"+mesF+"/"+anoF+" "+[horas, minutos, segundos].join(':');
 const day1 = diaF+"/"+mesF+"/"+anoF
-     
+
       localStorage.setItem("Last_Login_Horas", horas);
       localStorage.setItem("Last_Login_Minutos", minutos);
       localStorage.setItem("Last_Login_Dia", data);
@@ -861,19 +865,19 @@ function Show_pass1() {
   }
 
   if (typeof(Storage) !== "undefined") {
-    
+
     } else {
       localStorage.setItem("Load", "false");
       document.getElementById("Toast_Text").innerHTML = "Error 001, Navegador Incompativel"
         Toast()
-      
+
        setTimeout(function() {
       window.location.href = "error-002.html";
       }, 1000);
     }
 
 
-  
+
 
 
     function Product_Photo(element, idss) {
