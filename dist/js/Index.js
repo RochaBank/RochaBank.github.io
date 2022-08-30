@@ -277,6 +277,8 @@ function Register420 () {
 
 
   // =============================== Variavens Nessacarias =================================
+  localStorage.setItem("Nome3", localStorage.getItem("Nome_Real_CD"));
+
 
   full_name = localStorage.getItem("Nome_Real_CD");
 
