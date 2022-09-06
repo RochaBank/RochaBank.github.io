@@ -1,136 +1,93 @@
 <!doctype html>
-<!--
-* Tabler - Premium and Open Source index template with responsive and high quality UI.
-* @version 1.0.0-beta10
-* @link https://tabler.io
-* Copyright 2018-2022 The Tabler Authors
-* Copyright 2018-2022 codecalm.net Paweł Kuna
-* Licensed under MIT (https://github.com/tabler/tabler/blob/master/LICENSE)
--->
+
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+    <meta name="viewport" content="width=device-width, initial-scale=0.4, viewport-fit=cover"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Licença.</title>
+
+    <title>RochaBank - Documentação </title>
     <!-- CSS files -->
-    <link href="./dist/css/tabler.min.css" rel="stylesheet"/>
-    <link href="./dist/css/tabler-flags.min.css" rel="stylesheet"/>
-    <link href="./dist/css/tabler-payments.min.css" rel="stylesheet"/>
-    <link href="./dist/css/tabler-vendors.min.css" rel="stylesheet"/>
-    <link href="./dist/css/demo.min.css" rel="stylesheet"/>
+    <link href="./dist/Css/tabler.min.css" rel="stylesheet"/>
+    <link href="./dist/Css/tabler-flags.min.css" rel="stylesheet"/>
+    <link href="./dist/Css/tabler-payments.min.css" rel="stylesheet"/>
+    <link href="./dist/Css/tabler-vendors.min.css" rel="stylesheet"/>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   </head>
-  <body >
-    <div class="page">
+
+  <body  onload="load12()">
+    <div id="Page_1">
+
+    <div id="snackbar"> <span id="Toast_Text"></span> </div>
+
+    <center>
+    <div id="Splash">
+      <img src="./static/logo.png" alt="Pal System" class="navbar-brand-image" style="margin-top: 40vh; width: 300px; height: 250px;">
+    </div>
+   </center>
+    <div class="page" id="Page_01" style="display:none">
 
 
 
-      <div class="page-wrapper">
-        <div class="container-xl">
-          <!-- Page title -->
-          <div class="page-header d-print-none">
-            <div class="row g-2 align-items-center">
-              <div class="col">
-                <h2 class="page-title">
-                  Tabler License
-                </h2>
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="page-body">
-          <div class="container-xl">
-            <div class="row row-cards">
-              <div class="col-lg-8">
-                <div class="card card-lg">
-                  <div class="card-body">
-                    <div class="markdown">
-                      <p>This is a legal agreement between you, the Purchaser, and Tabler. Purchasing or downloading of any Tabler product (Tabler Free, Tabler PRO, Tabler Email), constitutes your acceptance of the terms of this license, <a href="https://tabler.io/terms-of-service.html">Tabler terms of service</a> and <a href="https://tabler.io/privacy-policy.html">Tabler private policy</a>.</p>
-                      <p>A license grants you a non-exclusive and non-transferable right to use and incorporate the item in your personal or commercial projects.</p>
-                      <h3 id="tabler-free-license">Tabler Free License</h3>
-                      <p>Tabler Free is available under MIT License</p>
-                      <p>Copyright 2022 Tabler</p>
-                      <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
-                      <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
-                      <p>THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
-                      <h3 id="tabler-pro-and-tabler-email-license">Tabler PRO and Tabler Email License</h3>
-                      <p>After Purchasing you are granted the use products under the conditions featured belowed.</p>
-                      <p>Rights</p>
-                      <ol>
-                        <li>You have rights to use our resources for any or all of your personal and commercial projects.</li>
-                        <li>You may modify the resources according to your requirements.</li>
-                        <li>You are not required to attribute or link to Tabler in any of your projects.</li>
-                      </ol>
-                      <p>Restrictions</p>
-                      <ol>
-                        <li>You do not have the rights to redistribute, resell, lease, license, sub-license or offer the file downloaded to any third party.</li>
-                        <li>For any resalable web applications or software programs, you cannot include our graphic resources as an additional attachment.</li>
-                        <li>You cannot redistribute any of the software, or products created with Tabler paid  products.</li>
-                        <li>You cannot add our source code to any open source repository.</li>
-                        <li>The source code may not be placed on any website in a complete or archived downloadable format.</li>
-                      </ol>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex align-items-center mb-3">
-                      <div class="me-3">
-                        <!-- Download SVG icon from http://tabler-icons.io/i/scale -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-md" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><line x1="7" y1="20" x2="17" y2="20" /><path d="M6 6l6 -1l6 1" /><line x1="12" y1="3" x2="12" y2="20" /><path d="M9 12l-3 -6l-3 6a3 3 0 0 0 6 0" /><path d="M21 12l-3 -6l-3 6a3 3 0 0 0 6 0" /></svg>
+            <div class="container-xl">
+              <div class="row gx-lg-5">
+
+                <div class="col-lg-9" style="width: 100%;">
+                  <div class="card card-lg">
+                    <div class="card-body">
+                      <div class="markdown">
+                        <div>
+                          <div class="d-flex mb-3">
+                            <h1 class="m-0">Changelog</h1>
+                          </div>
+                        </div>
+                        <div class="mb-4">
+                          <h2 class="mb-2">
+                            <span>1.0.0</span> –
+                            <small>Agosto 2, 2022</small>
+                          </h2>
+                          <ul>
+
+                            <li>Alunos<code class="language-plaintext highlighter-rouge">Livres;</code>Podem Criar Contas e Fazer Cadastro</li>
+                            <li>Aba De Reporte Ativa <code class="language-plaintext highlighter-rouge">Desativada</code> Top Das Galaxias</li>
+                            <li>EterEggs Espalhados <code class="language-plaintext highlighter-rouge">لا تضغط على مفتاح التحكم عند تسجيل الدخول</code> :)</li>
+                          </ul>
+                        </div>
+
+                        <div class="mb-4">
+                          <h2 class="mb-2">
+                            <span>1.0.0-beta2</span> –
+                            <small>Agosto 30, 2022</small>
+                          </h2>
+                          <ul>
+                            <li>Bugs Corrigidos</li>
+                            <li><code class="language-plaintext highlighter-rouge">Novo</code> Liberado Para Alunos</li>
+                            <li>Aba De notificações Adicionada</li>
+                            <li>Vendedores Adicionados <code class="language-plaintext highlighter-rouge">Whatsapp</code></li>
+
+                          </ul>
+                        </div>
+                        <div class="mb-4">
+                          <h2 class="mb-2">
+                            <span>0.001 Beta</span> –
+                            <small>Indefinido</small>
+                          </h2>
+                          <p class="strong">Data De Criação Deste Projeto</p>
+                          <ul>
+                            <li>Projeto criado</li>
+                          </ul>
+                        </div>
                       </div>
-                      <div>
-                        <small class="text-muted">tabler/tabler is licensed under the</small>
-                        <h3 class="lh-1">MIT License</h3>
-                      </div>
                     </div>
-                    <div class="text-muted mb-3">
-                      A short and simple permissive license with conditions only requiring preservation of copyright and
-                      license notices. Licensed works, modifications, and larger works may be distributed under different terms
-                      and without source code.
-                    </div>
-                    <h4>Permissions</h4>
-                    <ul class="list-unstyled space-y-1">
-                      <li><!-- Download SVG icon from http://tabler-icons.io/i/check -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-green" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l5 5l10 -10" /></svg>
-                        Commercial use</li>
-                      <li><!-- Download SVG icon from http://tabler-icons.io/i/check -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-green" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l5 5l10 -10" /></svg>
-                        Modification</li>
-                      <li><!-- Download SVG icon from http://tabler-icons.io/i/check -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-green" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l5 5l10 -10" /></svg>
-                        Distribution</li>
-                      <li><!-- Download SVG icon from http://tabler-icons.io/i/check -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-green" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l5 5l10 -10" /></svg>
-                        Private use</li>
-                    </ul>
-                    <h4>Limitations</h4>
-                    <ul class="list-unstyled space-y-1">
-                      <li><!-- Download SVG icon from http://tabler-icons.io/i/x -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-red" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
-                        Liability</li>
-                      <li><!-- Download SVG icon from http://tabler-icons.io/i/x -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-red" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
-                        Warranty</li>
-                    </ul>
-                    <h4>Conditions</h4>
-                    <ul class="list-unstyled space-y-1">
-                      <li><!-- Download SVG icon from http://tabler-icons.io/i/info-circle -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-blue" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="9" /><line x1="12" y1="8" x2="12.01" y2="8" /><polyline points="11 12 12 12 12 16 13 16" /></svg>
-                        License and copyright notice</li>
-                    </ul>
-                  </div>
-                  <div class="card-footer">
-                    This is not legal advice.
-                    <a href="#" target="_blank">Learn more about repository licenses.</a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+      -->
         <footer class="footer footer-transparent d-print-none">
           <div class="container-xl">
             <div class="row text-center align-items-center flex-row-reverse">
@@ -167,10 +124,687 @@
         </footer>
       </div>
     </div>
+    </div>
+
+
+    <div class="modal modal-blur fade" id="modal-report" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document" id="myDialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Novo Usuario<h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <span>console.loga: Caso Suas Informaçãoes Estejam Incorretas Sua Conta Sera Apagada, E seu Dispositivo Bloqueado!!</span>
+       <br> <br>
+            <div class="mb-3">
+              <label class="form-label">Nome</label>
+              <input type="text" class="form-control" name="example-text-input" placeholder="Nome E Sobrenome De Aluno" id="Nome_Real" onkeydown="limit3(this);" onkeyup="limit3(this);" onkeypress="return lettersOnly(event);">
+              <br>
+               <label class="form-label">Senha</label>
+            <input type="text" class="form-control" name="example-text-input" placeholder="Digite Corretamente" id="Senha_CD1" onclick="Digitar()" onkeydown="limit2(this);" onkeyup="limit2(this);">
+            <br>
+            <label class="form-label">Contador (Codigo De 4 Ou Mais digitos)</label>
+            <input type="text" class="form-control" name="example-text-input" placeholder="Gite 4 digitos que só Voçê saiba!" id="Contador1" value="" onkeydown="limit(this);" onkeyup="limit(this);">
+            <br>
+
+            </div>
+            <label class="form-label">Idade</label>
+            <input type="text" class="form-control" name="example-text-input" placeholder="Digite Apenas 2 Numeros" id="Idade1"  onkeydown="limit1(this);" onkeyup="limit1(this);">
+            <br>
+
+            <br>
+            <label class="form-label">Sexo</label>
+            <div class="form-selectgroup-boxes row mb-3">
+              <div class="col-lg-6">
+                <label class="form-selectgroup-item" onclick="Sexo_1()">
+
+                  <input type="radio" name="report-type" value="1" class="form-selectgroup-input"  id="Sexo" checked>
+                  <span class="form-selectgroup-label d-flex align-items-center p-3">
+                    <span class="me-3">
+                      <span class="form-selectgroup-check"></span>
+                    </span>
+                    <span class="form-selectgroup-label-content">
+                      <span class="form-selectgroup-title strong mb-1">Indeterminado</span>
+                      <span class="d-block text-muted">Essa Informação Não Sera Exibida Para Outros Alunos!</span>
+                    </span>
+                  </span>
+                </label>
+              </div>
+              <div class="col-lg-6">
+                <label class="form-selectgroup-item"  onclick="Sexo_2()">
+                  <input type="radio" name="report-type" value="2" class="form-selectgroup-input"  id="Sexo">
+                  <span class="form-selectgroup-label d-flex align-items-center p-3">
+                    <span class="me-3">
+                      <span class="form-selectgroup-check"></span>
+                    </span>
+                    <span class="form-selectgroup-label-content">
+                      <span class="form-selectgroup-title strong mb-1">Masculino</span>
+                      <span class="d-block text-muted">Algumas Informaçãoes Modificadas</span>
+                    </span>
+                  </span>
+                </label>
+              </div>
+
+              <div class="col-lg-6" style="margin-top: 15px;">
+                <label class="form-selectgroup-item" onclick="Sexo_3()">
+                  <input type="radio" name="report-type" value="3" class="form-selectgroup-input" id="Sexo">
+                  <span class="form-selectgroup-label d-flex align-items-center p-3">
+                    <span class="me-3">
+                      <span class="form-selectgroup-check"></span>
+                    </span>
+                    <span class="form-selectgroup-label-content">
+                      <span class="form-selectgroup-title strong mb-1">Feminino</span>
+                      <span class="d-block text-muted">Algumas Informações Modificadas</span>
+                    </span>
+                  </span>
+                </label>
+              </div>
+
+        <span id="Option_1" style="opacity: 0;"></span>
+
+        <br> <br>
+
+        <div class="mb-3">
+          <label class="form-label">Moderador</label>
+          <select class="form-select" id="Modo">
+            <option value="1" selected>Aluno</option>
+
+            <option value="3">Professor</option>
+            <option value="4">Cordenador</option>
+            <option value="5">Administrador</option>
+            <option value="6">Desenvolvedor</option>
+
+
+
+          </select>
+        </div>
+
+        </div>
+
+
+
+
+
+            <div class="row">
+
+              <div class="col-lg-6" style="width: 100%;">
+                <div class="mb-3">
+                  <label class="form-label">Serie</label>
+                  <select class="form-select" id="Serie">
+                    <option value="6° A" selected>6° A</option>
+
+                    <option value="6° B">6° B</option>
+                    <option value="6° B">6° C</option>
+                    <option value="6° B">6° D</option>
+
+                    <option value="7° A">7° A</option>
+                    <option value="7° B">7° B</option>
+                    <option value="7° C">7° C</option>
+                    <option value="7° D">7° D</option>
+                    <option value="8° A">8° A</option>
+                    <option value="8° B">8° B</option>
+                    <option value="8° C">8° C</option>
+                    <option value="8° D">8° D</option>
+                    <option value="9° A">9° A</option>
+                    <option value="9° B">9° B</option>
+                    <option value="9° c">9° C</option>
+                    <option value="9° D">9° D</option>
+
+
+                  </select>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="mb-3">
+                  <label class="form-label">Leais Inicial</label>
+                  <input type="text" class="form-control" id="Leal_INC" value="1,00">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="mb-3">
+                  <label class="form-label">Data De Cadastro (Opcional)</label>
+                  <input type="date" class="form-control" style="color: #4949494f;" disabled="disabled">
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div>
+                  <label class="form-label">Descrição</label>
+                  <textarea class="form-control" rows="3" id="Description12">Olá, Estou Usando O Rocha Bank</textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">
+              Cancelar
+            </a>
+            <a href="#" class="btn btn-primary ms-auto" data-bs-dismiss="modal" id="Create" onclick="Register1992()">
+              <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" /></svg>
+              Criar Agora
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal-blur fade" id="modal-large" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Seja Bem Vindo(a)</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"  onclick="bem_vindo_confirm()"></button>
+          </div>
+          <div class="modal-body">
+            Olá Seja Bem Vindo(a) Ao Rocha Bank, Talvez Já tenha Visto Está Mensagem importante, Mas E Bom Avisar Que Nesse Banco Existem Leis Que Voçê Concordou Em Seguir Ao Fazer Login, Caso Perca Sua Senha Seu Contador Está Logo Abaixo!
+            <br><br>
+            <div class="mb-3">
+              <label class="form-label">Contador</label>
+              <div class="input-group mb-2">
+                <span class="input-group-text">
+                  Contador:
+                </span>
+                <input type="text" class="form-control" placeholder="Vazio?, Isso E Um Poblema!" autocomplete="off" id="Contador" disabled="disabled">
+              </div>
+
+
+
+
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn me-auto" data-bs-dismiss="modal"  onclick="bem_vindo_confirm()">Cancelar</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="bem_vindo_confirm()">Confirmar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="snackbar"> <span id="Toast_Text"></span> </div>
+
+  </div>
     <!-- Libs JS -->
+    <script src="./dist/libs/jsvectormap/dist/js/jsvectormap.min.js" defer></script>
+    <script src="./dist/libs/jsvectormap/dist/maps/world.js" defer></script>
+    <script src="./dist/libs/jsvectormap/dist/maps/world-merc.js" defer></script>
     <!-- Tabler Core -->
     <script src="./dist/js/tabler.min.js" defer></script>
     <script src="./dist/js/demo.min.js" defer></script>
+
+       <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+       <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+       <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+       <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script>
+  localStorage.setItem("Metodo1", "Lodddgi1n");
+localStorage.setItem("Load1", "true");
+
+
+
+
+    </script>
+       <!-- Our script must be loaded after firebase references -->
+       <script src="./dist/js/Index.js"></script>
+
+
+
+
+       <style>
+        #snackbar {
+        visibility: hidden; /* Hidden by default. Visible on click */
+        min-width: 250px; /* Set a default minimum width */
+        margin-left: -125px; /* Divide value of min-width by 2 */
+        background-color: #333; /* Black background color */
+        color: #fff; /* White text color */
+        text-align: center; /* Centered text */
+        border-radius: 2px; /* Rounded borders */
+        padding: 16px; /* Padding */
+        position: fixed; /* Sit on top of the screen */
+        z-index: 1; /* Add a z-index if needed */
+        left: 50%; /* Center the snackbar */
+        bottom: 30px; /* 30px from the bottom */
+      }
+
+      /* Show the snackbar when clicking on a button (class added with JavaScript) */
+      #snackbar.show {
+        visibility: visible; /* Show the snackbar */
+        /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+        However, delay the fade out process for 2.5 seconds */
+        -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        animation: fadein 0.5s, fadeout 0.5s 2.5s;
+      }
+
+      /* Animations to fade the snackbar in and out */
+      @-webkit-keyframes fadein {
+        from {bottom: 0; opacity: 0;}
+        to {bottom: 30px; opacity: 1;}
+      }
+
+      @keyframes fadein {
+        from {bottom: 0; opacity: 0;}
+        to {bottom: 30px; opacity: 1;}
+      }
+
+      @-webkit-keyframes fadeout {
+        from {bottom: 30px; opacity: 1;}
+        to {bottom: 0; opacity: 0;}
+      }
+
+      @keyframes fadeout {
+        from {bottom: 30px; opacity: 1;}
+        to {bottom: 0; opacity: 0;}
+      }
+      </style>
+       <script>
+
+// =============================== Iniciar Firebase ======================================
+
+
+// ======================= Desconectar ===========================
+
+
+
+
+
+       </script>
+<script>
+  localStorage.setItem("Load", "true");
+
+
+
+
+  document.getElementById("Contador").value = localStorage.getItem("Contador");
+
+
+
+       //     document.getElementById("Compras_PG").style = "width:" + localStorage.getItem("Progress3") + ";";
+      //      document.getElementById("Ganhos_PG").style = "width:" + localStorage.getItem("Progress1") + ";";
+      //      document.getElementById("AutoDriver_PG").style = "width:" + localStorage.getItem("AutoDriver") + "%;";
+      //      document.getElementById("Sistema_PG").style = "width:" + localStorage.getItem("Sistema") + "%;";
+     //       document.getElementById("Backup_PG").style = "width:" + localStorage.getItem("Backup") + "%;";
+
+
+
+
+
+
+
+
+ if (localStorage.getItem("Compras") == "0") {
+document.getElementById("Cart").innerHTML = "Vazio"
+ } else {
+document.getElementById("Cart_Desc").innerHTML = "Voçê Tem: " + localStorage.getItem("Compras") + " Compras"
+document.getElementById("Cart").innerHTML = localStorage.getItem("Compras") + " Compras";
+
+
+ }
+
+
+ if (localStorage.getItem("Modo") == 'Desenvolvedor' || localStorage.getItem("Modo") == 'Administrador' || localStorage.getItem("Modo") == 'Cordenador' || localStorage.getItem("Modo") == 'Professor') {
+document.getElementById("Mode_ADM").style = ""
+
+
+      } else {
+   document.getElementById("Modo_ADM").onclick = ""
+
+
+}
+
+
+</script>
+
+
+<script>
+
+
+</script>
+
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+
+
+<script>
+
+
+</script>
+
+
+<style>
+  .colorido {
+    animation: 5s animadorr infinite;
+  }
+  @keyframes animadorr {
+
+    0% {
+     color: #7b68ee;
+    }
+    15% {
+     color: #00bfff ;
+    }
+    30% {
+     color: #ee82ee ;
+    }
+    45% {
+     color: #ff8c00 ;
+    }
+    60% {
+     color: #f08080 ;
+    }
+    75% {
+     color: #ff0000 ;
+    }
+    100% {
+     color: #0000ff ;
+    }
+  }
+</style>
+ <script>
+  function Toast() {
+  // Get the snackbar DIV
+  var x = document.getElementById("snackbar");
+
+  // Add the "show" class to DIV
+  x.className = "show";
+
+  // After 3 seconds, remove the show class from DIV
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+ </script>
+ <script>
+  function lettersOnly(evt) {
+    evt = (evt) ? evt : event;
+    var charCode = (evt.charCode) ? evt.charCode : ((evt.keyCode) ? evt.keyCode :
+        ((evt.which) ? evt.which : 0));
+    if (charCode > 31 && (charCode < 65 || charCode > 90) &&
+        (charCode < 97 || charCode > 122)) {
+
+        return false;
+    }
+    return true;
+}
+</script>
+<script>
+
+setTimeout(function() {
+if (localStorage.getItem("Load1") == "true") {
+
+  document.getElementById("Page_01").style = 'display:auto';
+  document.getElementById("Splash").style = 'display:none';
+
+}
+}, 2300);
+
+
+</script>
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+  *{
+      margin: 0px;
+      padding: 0px;
+  }
+
+  body{
+      font-family: 'Exo', sans-serif;
+  }
+
+
+  .context {
+      width: 100%;
+      position: absolute;
+      top:50vh;
+
+  }
+
+  .context h1{
+      text-align: center;
+      color: #fff;
+      font-size: 50px;
+  }
+
+
+  .area{
+      background: #4e54c8ad;
+      background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+      width: 100%;
+      height:100vh;
+
+
+  }
+
+  .circles{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+  }
+
+  .circles li{
+      position: absolute;
+      display: block;
+      list-style: none;
+      width: 20px;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      animation: animate 25s linear infinite;
+      bottom: -150px;
+
+  }
+
+  .circles li:nth-child(1){
+      left: 25%;
+      width: 80px;
+      height: 80px;
+      animation-delay: 0s;
+  }
+
+
+  .circles li:nth-child(2){
+      left: 10%;
+      width: 20px;
+      height: 20px;
+      animation-delay: 2s;
+      animation-duration: 12s;
+  }
+
+  .circles li:nth-child(3){
+      left: 70%;
+      width: 20px;
+      height: 20px;
+      animation-delay: 4s;
+  }
+
+  .circles li:nth-child(4){
+      left: 40%;
+      width: 60px;
+      height: 60px;
+      animation-delay: 0s;
+      animation-duration: 18s;
+  }
+
+  .circles li:nth-child(5){
+      left: 65%;
+      width: 20px;
+      height: 20px;
+      animation-delay: 0s;
+  }
+
+  .circles li:nth-child(6){
+      left: 75%;
+      width: 110px;
+      height: 110px;
+      animation-delay: 3s;
+  }
+
+  .circles li:nth-child(7){
+      left: 35%;
+      width: 150px;
+      height: 150px;
+      animation-delay: 7s;
+  }
+
+  .circles li:nth-child(8){
+      left: 50%;
+      width: 25px;
+      height: 25px;
+      animation-delay: 15s;
+      animation-duration: 45s;
+  }
+
+  .circles li:nth-child(9){
+      left: 20%;
+      width: 15px;
+      height: 15px;
+      animation-delay: 2s;
+      animation-duration: 35s;
+  }
+
+  .circles li:nth-child(10){
+      left: 85%;
+      width: 150px;
+      height: 150px;
+      animation-delay: 0s;
+      animation-duration: 11s;
+  }
+
+
+
+  @keyframes animate {
+
+      0%{
+          transform: translateY(0) rotate(0deg);
+          opacity: 1;
+          border-radius: 0;
+      }
+
+      100%{
+          transform: translateY(-1000px) rotate(720deg);
+          opacity: 0;
+          border-radius: 50%;
+      }
+
+  }
+
+
+
+
+  </style>
+  <script>
+
+window.setInterval('sizeOfThings()', 1000);
+
+    function sizeOfThings(){
+  var windowWidth = window.innerWidth;
+  var windowHeight = window.innerHeight;
+
+  var screenWidth = screen.width;
+  var screenHeight = screen.height;
+
+    }
+
+sizeOfThings();
+
+window.addEventListener('resize', function(){
+	sizeOfThings();
+});
+
+
+setInterval(ObterBanido, 5000);
+  </script>
+  <script>
+
+    setTimeout(function() {
+    if (document.getElementById("Compra").innerHTML == "") {
+      document.location.reload(true)
+
+    }
+  }, 2000);
+  </script>
+  <script>
+                                    var a444444 = database.ref('Usuarios/' +  localStorage.getItem('Nome1') + "/Dados/Visual/Notification/1")
+                                    a444444.on('value', function(snapshot) {
+  var data = snapshot.val()
+  localStorage.setItem("1", data.a1);
+  localStorage.setItem("Title1", data.title);
+});
+
+setTimeout(function() {
+document.getElementById('Notifi_1_Title').innerHTML = localStorage.getItem('Title1')
+document.getElementById('Notifi_1_Messager').innerHTML = localStorage.getItem('1')
+}, 1100);
+
+
+
+
+
+
+
+var a44444 = database.ref('Usuarios/' +  localStorage.getItem('Nome1') + "/Dados/Visual/Notification/2")
+                                    a44444.on('value', function(snapshot) {
+  var data = snapshot.val()
+  localStorage.setItem("2", data.a2);
+  localStorage.setItem("Title2", data.title);
+});
+
+setTimeout(function() {
+document.getElementById('Notifi_2_Title').innerHTML = localStorage.getItem('Title2')
+document.getElementById('Notifi_2_Messager').innerHTML = localStorage.getItem('2')
+}, 1100);
+
+
+
+
+
+
+var a4444 = database.ref('Usuarios/' +  localStorage.getItem('Nome1') + "/Dados/Visual/Notification/3")
+                                    a4444.on('value', function(snapshot) {
+  var data = snapshot.val()
+  localStorage.setItem("3", data.a3);
+  localStorage.setItem("Title3", data.title);
+});
+
+setTimeout(function() {
+document.getElementById('Notifi_3_Title').innerHTML = localStorage.getItem('Title3')
+document.getElementById('Notifi_3_Messager').innerHTML = localStorage.getItem('3')
+}, 1100);
+
+
+
+
+
+
+
+
+var a444444 = database.ref('Usuarios/' +  localStorage.getItem('Nome1') + "/Dados/Visual/Notification/4")
+                                    a444444.on('value', function(snapshot) {
+  var data = snapshot.val()
+  localStorage.setItem("4", data.a4);
+  localStorage.setItem("Title4", data.title);
+});
+
+setTimeout(function() {
+document.getElementById('Notifi_4_Title').innerHTML = localStorage.getItem('Title4')
+document.getElementById('Notifi_4_Messager').innerHTML = localStorage.getItem('4')
+}, 1100);
+  </script>
   </body>
 </html>
-
