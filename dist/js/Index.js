@@ -313,6 +313,7 @@ function Register420 () {
       Campo : localStorage.getItem("Matutino_Select"),
 
     }
+    localStorage.setItem("Nome3", localStorage.getItem("Nome_Real_CD"))
     var Pessoal_1_1_2 = {
       Descricao : localStorage.getItem("Description12")
     }
